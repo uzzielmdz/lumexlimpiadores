@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import CarruselBase from '../components/CarruselBase';
+
 
 // Imágenes de Assets
 import heroBanner from "../assets/hero-banner.jpg"; 
