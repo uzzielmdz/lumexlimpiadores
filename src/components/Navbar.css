@@ -1,0 +1,18 @@
+/* Navbar.css */
+
+.logo-navbar {
+    height: 50px; /* Ajusta la altura según prefieras el tamaño del navbar */
+    width: auto;  /* Mantiene la proporción de aspecto original */
+    transition: transform 0.3s ease; /* Efecto suave opcional */
+}
+
+/* Efecto sutil opcional al pasar el mouse por el logo */
+.logo-navbar:hover {
+    transform: scale(1.05);
+}
+
+/* Asegura que el contenedor de la marca esté alineado */
+.navbar-brand {
+    padding: 0;
+    margin-right: 2rem;
+}

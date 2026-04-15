@@ -1,0 +1,29 @@
+.footer-clean {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Estilo para los iconos sociales */
+.social-icon {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    color: #6c757d; /* Color gris suave por defecto */
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* Colores de marca al pasar el mouse */
+.social-icon.fb:hover {
+    color: #1877F2; /* Azul Facebook */
+}
+
+.social-icon.ig:hover {
+    color: #E4405F; /* Rosa Instagram */
+}
+
+/* Ajuste de textos fuertes para que no desentonen */
+.footer-clean strong {
+    font-size: 0.85rem;
+}

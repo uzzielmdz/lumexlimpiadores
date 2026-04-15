@@ -1,0 +1,127 @@
+/* ===================================================
+   1. ESTILOS BASE (Móvil / Diseño simplificado)
+   =================================================== */
+
+.seccion-carrusel {
+  background-color: #000;
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.titulo-categoria {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.container_carru {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+  padding: 0 10px;
+}
+
+#items {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carru-item {
+  position: absolute;
+  width: 250px;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.carru-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* --- ESTADOS DE LAS IMÁGENES (Móvil) --- */
+.img_center { z-index: 10; opacity: 1; transform: scale(1); }
+.img_left, .img_rigth { opacity: 0; transform: scale(0.5); display: none; }
+.img_hidden { opacity: 0; transform: scale(0); display: none; }
+
+/* --- FLECHAS (Móvil) --- */
+.btn-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-arrow.left { left: 5px; }
+.btn-arrow.right { right: 5px; }
+
+.arrow-icon {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  display: block;
+}
+
+.left .arrow-icon { transform: rotate(-135deg); margin-left: 4px; }
+.right .arrow-icon { transform: rotate(45deg); margin-right: 4px; }
+
+/* ===================================================
+   2. ESTILOS PARA ESCRITORIO (Efecto 3D)
+   =================================================== */
+@media (min-width: 1024px) {
+  .container_carru { height: 500px; padding: 0 50px; }
+  #items { height: 450px; perspective: 1000px; }
+  
+  .carru-item { width: 400px; }
+  
+  /* Activamos los laterales en escritorio */
+  .img_left, .img_rigth { 
+    display: block; 
+    opacity: 0.4; 
+    filter: blur(2px); 
+  }
+  
+  .img_left { transform: translateX(-300px) scale(0.8) rotateY(15deg); }
+  .img_rigth { transform: translateX(300px) scale(0.8) rotateY(-15deg); }
+  .img_center { transform: scale(1.1) translateZ(0); }
+  
+  /* Flechas a los lados */
+  .btn-arrow { 
+    position: relative; 
+    top: auto; 
+    transform: none; 
+    margin: 0 20px; 
+    width: 60px; 
+    height: 60px;
+  }
+
+  .arrow-icon { width: 15px; height: 15px; border-top: 3px solid white; border-right: 3px solid white; }
+}

@@ -1,0 +1,138 @@
+/* --- BANNER HERO RESPONSIVO --- */
+.hero-banner-static {
+  width: 100%;
+  height: 400px;
+  background-image: url('../assets/hero-banner.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .hero-banner-static { height: 200px; }
+  .hero-title { font-size: 1.8rem !important; }
+}
+
+.hero-title {
+  color: #0d2c52;
+  font-weight: 800;
+  max-width: 500px;
+  font-size: 2.8rem;
+}
+
+/* --- CATEGORÍAS --- */
+.category-pill {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+.cat-icon-box {
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #004aad;
+}
+
+/* --- SECCIÓN QUIÉNES SOMOS --- */
+.quienes-somos-section {
+  position: relative;
+  background-image: url('../assets/fondo-quienes-somos.png');
+  background-size: 100% 100%; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 500px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .quienes-somos-section {
+    min-height: 250px;
+  }
+}
+
+/* Estilos para el texto de Quiénes Somos */
+.quienes-somos-title {
+  color: #0d2c52;
+  font-weight: 800; /* Más gruesa */
+  font-size: 2.5rem; /* Un poco más grande */
+}
+
+.quienes-somos-text {
+  color: #1a1a1a;
+  font-size: 1.15rem; /* Un poco más grande */
+  line-height: 1.7; /* Mayor espaciado entre líneas */
+  font-weight: 500; /* Un poco más gruesa */
+}
+
+/* Negritas dentro del texto */
+.quienes-somos-text strong {
+  font-weight: 800;
+  color: #0d2c52;
+}
+
+/* --- TARJETAS DE PRODUCTO ALINEADAS --- */
+.product-card-clean {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  transition: transform 0.2s ease;
+}
+
+.product-card-clean:hover {
+  transform: translateY(-5px);
+}
+
+.product-card-clean .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1;
+}
+
+/* Empuja el texto de descripción y el botón hacia abajo de forma uniforme */
+.product-card-clean .card-body p.text-muted {
+  flex-grow: 1;
+}
+
+.product-img-fixed {
+  width: 100%;
+  height: 150px; 
+  object-fit: contain;
+}
+
+/* --- AJUSTE RESPONSIVO PRODUCTOS --- */
+@media (max-width: 576px) {
+  .row-cols-md-5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px !important;
+  }
+}
+
+/* --- ESTILOS DE BORDES Y BOTONES --- */
+.custom-border-blue {
+  border: 2px solid #000080 !important; 
+  transition: all 0.3s ease;
+}
+
+.btn-azul-marino {
+  background-color: #000080 !important;
+  border-color: #000080 !important;
+  color: white !important;
+  display: block;
+  text-align: center;
+  margin-top: auto !important; /* Mantiene el botón pegado al fondo */
+}
+
+.btn-azul-marino:hover {
+  background-color: #000066 !important;
+  color: white !important;
+}
